@@ -1,28 +1,28 @@
 # Offline Flutter Tutor (Local LLM + RAG)
 
-An offline Flutter learning assistant that uses official Flutter documentation and a locally running LLM to explain concepts, debug errors, and guide Flutter app development — without internet access.
+An offline Flutter learning assistant that uses official Flutter documentation and a locally running large language model to explain concepts, debug errors, and guide Flutter app development — without relying on an internet connection.
 
-Built to avoid browser hopping, shallow tutorials, and hallucinated answers.
+This project was built to enable focused learning, avoid hallucinated answers, and reduce dependency on online tutorials and forums.
 
 ---
 
 ## Features
 
-- 📚 Uses real Flutter documentation (manually curated)
-- 🧠 Semantic search with embeddings (RAG)
-- 💻 Fully offline after setup
-- 🛠 CLI-based tutor for focused learning
-- 🧩 Explains Flutter concepts step by step with examples
+- Uses curated Flutter documentation as the knowledge source  
+- Retrieval-Augmented Generation (RAG) for accurate, context-based answers  
+- Fully offline after initial setup  
+- Command-line interface for distraction-free usage  
+- Step-by-step explanations with simple Dart examples  
 
 ---
 
 ## Tech Stack
 
-- Python
-- ChromaDB (vector database)
-- Sentence-Transformers (embeddings)
-- LM Studio (local LLM server)
-- Retrieval-Augmented Generation (RAG)
+- **Python** – core implementation  
+- **ChromaDB** – vector database for document retrieval  
+- **Sentence-Transformers** – text embeddings  
+- **LM Studio** – local LLM inference server  
+- **RAG (Retrieval-Augmented Generation)** – grounding model responses in real docs  
 
 ---
 
