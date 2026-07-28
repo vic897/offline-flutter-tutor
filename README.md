@@ -143,33 +143,32 @@ python chat.py
 
 
 ### Example Queries
--Explain StatelessWidget vs StatefulWidget
--Why does setState rebuild the widget tree?
--Explain this Flutter error: <paste error>
--Give me a small practice task on Row and Column
+- Explain StatelessWidget vs StatefulWidget
+- Why does setState rebuild the widget tree?
+- Explain this Flutter error: <paste error>
+- Give me a small practice task on Row and Column
 
 
 ### Why This Project
 
 ## This project was built to:
 
--Learn Flutter using official documentation instead of shallow tutorials
--Prevent hallucinated or incorrect explanations from LLMs
--Explore practical use of RAG systems and local LLM tooling
--Build a reusable developer-focused learning assistant
+- Learn Flutter using official documentation instead of shallow tutorials
+- Prevent hallucinated or incorrect explanations from LLMs
+- Explore practical use of RAG systems and local LLM tooling
+- Build a reusable developer-focused learning assistant
 
 
 ## Limitations
 
 
--Documentation must be manually curated
--Not a replacement for full API references
--CLI-only by design (no GUI)
+- Documentation must be manually curated
+- Not a replacement for full API references
+- CLI-only by design (no GUI)
 
 
 ## Future Improvements
 
--Automatic documentation ingestion
--Error-focused debugging mode
--Interactive quizzes and practice tasks
--Optional TUI or web interface
+- Automatic documentation ingestion
+- Error-focused debugging mode
+- Optional GUI or web interface
