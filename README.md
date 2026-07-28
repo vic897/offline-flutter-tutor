@@ -143,10 +143,10 @@ python chat.py
 
 
 ### Example Queries
-Explain StatelessWidget vs StatefulWidget
-Why does setState rebuild the widget tree?
-Explain this Flutter error: <paste error>
-Give me a small practice task on Row and Column
+-Explain StatelessWidget vs StatefulWidget
+-Why does setState rebuild the widget tree?
+-Explain this Flutter error: <paste error>
+-Give me a small practice task on Row and Column
 
 
 ### Why This Project
