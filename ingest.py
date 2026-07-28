@@ -7,11 +7,7 @@ DB_PATH = "embeddings"
 
 model = SentenceTransformer("all-MiniLM-L6-v2")
 
-client = chromadb.Client(
-    chromadb.config.Settings(
-        persist_directory=DB_PATH
-    )
-)
+client = chromadb.PersistentClient(path=DB_PATH)
 
 collection = client.get_or_create_collection(name="flutter_docs")
 
