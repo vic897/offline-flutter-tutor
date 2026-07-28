@@ -77,10 +77,64 @@ This builds the local vector database.
 
 ### 4. Start LM Studio
 
-1. Load an instruct-style model (e.g., Mistral, Qwen)
-2. Enable Local Server
-3. Note the server port (default: 1234)
+1. Load a model in LM Studio.
+2. Enable **Local Server**.
+3. Note the server port (default: `1234`).
 
+#### Choose the correct API format for your model
+
+**Option A: Instruct / Chat models (Recommended)**
+
+Models such as **Qwen2.5-Coder-Instruct**, **Mistral Instruct**, **Llama Instruct**, and similar chat-tuned models must use the Chat Completions API:
+
+```python
+LM_STUDIO_URL = "http://localhost:1234/v1/chat/completions"
+
+response = requests.post(
+    LM_STUDIO_URL,
+    json={
+        "model": "qwen2.5-coder-7b-instruct",
+        "messages": [
+            {"role": "system", "content": "You are a helpful Flutter expert."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.2,
+        "max_tokens": 1200
+    }
+)
+```
+
+Read the response with:
+
+```python
+answer = response.json()["choices"][0]["message"]["content"]
+```
+
+**Option B: Base / Completion models**
+
+Non-chat completion models should use the Completions API:
+
+```python
+LM_STUDIO_URL = "http://localhost:1234/v1/completions"
+
+response = requests.post(
+    LM_STUDIO_URL,
+    json={
+        "model": "<base-model>",
+        "prompt": prompt,
+        "temperature": 0.2,
+        "max_tokens": 1200
+    }
+)
+```
+
+Read the response with:
+
+```python
+answer = response.json()["choices"][0]["text"]
+```
+
+> **Important:** If you use an instruct/chat model with the `/v1/completions` endpoint, you may receive repeated special tokens such as `<|im_start|>` instead of a valid answer. Match the endpoint to the model type.
 
 ### 5. Run the Flutter tutor
 ```bash
